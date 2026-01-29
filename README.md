@@ -1,73 +1,189 @@
-# Welcome to your Lovable project
+# NemoUI Setup Guide
 
-## Project info
+A Vite + React + Shadcn/UI + TypeScript starter template with comprehensive UI components.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 Quick Start
 
-## How can I edit this code?
+### 1. Clone the Repository
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+git clone <repolink>
+cd nemoUI
 ```
 
-**Edit a file directly in GitHub**
+### 2. Install Dependencies
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm install
+```
 
-**Use GitHub Codespaces**
+### 3. Clean Up (Optional - for fresh start)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+rm -f .git package.json package-lock.json
+git init
+```
 
-## What technologies are used for this project?
+## 📦 Manual Installation
 
-This project is built with:
+If you prefer to install all dependencies manually:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+npm install \
+  @hookform/resolvers \
+  @radix-ui/react-accordion \
+  @radix-ui/react-alert-dialog \
+  @radix-ui/react-aspect-ratio \
+  @radix-ui/react-avatar \
+  @radix-ui/react-checkbox \
+  @radix-ui/react-collapsible \
+  @radix-ui/react-context-menu \
+  @radix-ui/react-dialog \
+  @radix-ui/react-dropdown-menu \
+  @radix-ui/react-hover-card \
+  @radix-ui/react-label \
+  @radix-ui/react-menubar \
+  @radix-ui/react-navigation-menu \
+  @radix-ui/react-popover \
+  @radix-ui/react-progress \
+  @radix-ui/react-radio-group \
+  @radix-ui/react-scroll-area \
+  @radix-ui/react-select \
+  @radix-ui/react-separator \
+  @radix-ui/react-slider \
+  @radix-ui/react-slot \
+  @radix-ui/react-switch \
+  @radix-ui/react-tabs \
+  @radix-ui/react-toast \
+  @radix-ui/react-toggle \
+  @radix-ui/react-toggle-group \
+  @radix-ui/react-tooltip \
+  @supabase/supabase-js \
+  @tanstack/react-query \
+  class-variance-authority \
+  clsx \
+  cmdk \
+  date-fns \
+  embla-carousel-react \
+  input-otp \
+  lucide-react \
+  next-themes \
+  react \
+  react-day-picker \
+  react-dom \
+  react-hook-form \
+  react-markdown \
+  react-resizable-panels \
+  react-router-dom \
+  recharts \
+  sonner \
+  tailwind-merge \
+  tailwindcss-animate \
+  vaul \
+  zod
+```
 
-## How can I deploy this project?
+## 📋 Package.json Configuration
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+```json
+{
+  "name": "vite_react_shadcn_ts",
+  "public": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:dev": "vite build --mode development",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@radix-ui/react-accordion": "^1.2.12",
+    "@radix-ui/react-alert-dialog": "^1.1.15",
+    "@radix-ui/react-aspect-ratio": "^1.1.8",
+    "@radix-ui/react-avatar": "^1.1.11",
+    "@radix-ui/react-checkbox": "^1.3.3",
+    "@radix-ui/react-collapsible": "^1.1.12",
+    "@radix-ui/react-context-menu": "^2.2.16",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
+    "@radix-ui/react-hover-card": "^1.1.15",
+    "@radix-ui/react-label": "^2.1.8",
+    "@radix-ui/react-menubar": "^1.1.16",
+    "@radix-ui/react-navigation-menu": "^1.2.14",
+    "@radix-ui/react-popover": "^1.1.15",
+    "@radix-ui/react-progress": "^1.1.8",
+    "@radix-ui/react-radio-group": "^1.3.8",
+    "@radix-ui/react-scroll-area": "^1.2.10",
+    "@radix-ui/react-select": "^2.2.6",
+    "@radix-ui/react-separator": "^1.1.8",
+    "@radix-ui/react-slider": "^1.3.6",
+    "@radix-ui/react-slot": "^1.2.4",
+    "@radix-ui/react-switch": "^1.2.6",
+    "@radix-ui/react-tabs": "^1.1.13",
+    "@radix-ui/react-toast": "^1.2.15",
+    "@radix-ui/react-toggle": "^1.1.10",
+    "@radix-ui/react-toggle-group": "^1.1.11",
+    "@radix-ui/react-tooltip": "^1.2.8",
+    "@supabase/supabase-js": "^2.93.2",
+    "@tanstack/react-query": "^5.90.20",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.1.1",
+    "date-fns": "^4.1.0",
+    "embla-carousel-react": "^8.6.0",
+    "input-otp": "^1.4.2",
+    "lucide-react": "^0.563.0",
+    "next-themes": "^0.4.6",
+    "react": "^19.2.4",
+    "react-day-picker": "^9.13.0",
+    "react-dom": "^19.2.4",
+    "react-hook-form": "^7.71.1",
+    "react-markdown": "^10.1.0",
+    "react-resizable-panels": "^4.5.4",
+    "react-router-dom": "^7.13.0",
+    "recharts": "^3.7.0",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss-animate": "^1.0.7",
+    "vaul": "^1.1.2",
+    "zod": "^4.3.6"
+  }
+}
+```
 
-## Can I connect a custom domain to my Lovable project?
+## 🛠️ Available Scripts
 
-Yes, you can!
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build in development mode
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
+- `npm run test` - Run tests once
+- `npm run test:watch` - Run tests in watch mode
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🎨 Included Components
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This template includes all Shadcn/UI components with Radix UI primitives:
+- Forms (with react-hook-form + zod validation)
+- Dialogs, Popovers, Dropdowns
+- Navigation components
+- Data display components (Accordion, Tabs, etc.)
+- Feedback components (Toast, Progress, etc.)
+- And many more!
+
+## 🔧 Tech Stack
+
+- **Framework:** React 19.2.4
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS with animations
+- **UI Components:** Shadcn/UI + Radix UI
+- **Routing:** React Router DOM 7.13.0
+- **State Management:** TanStack Query
+- **Backend:** Supabase
+- **Charts:** Recharts
+- **Form Handling:** React Hook Form + Zod
