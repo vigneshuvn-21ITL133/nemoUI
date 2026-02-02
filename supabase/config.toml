@@ -1,0 +1,4 @@
+project_id = "zphrdghvtxpsnuwrhgca"
+
+[functions.send-task-reminder]
+verify_jwt = false
